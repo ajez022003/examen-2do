@@ -14,7 +14,7 @@ const grupos_schema_1 = require("../models/grupos.schema");
 const obtenertodoslosgrupos = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const listaGrupos = yield grupos_schema_1.gruposSchema.find();
     if (listaGrupos) {
-        res.send({ status: true, message: 'lista obtenida' });
+        res.send({ status: true, message: 'lista obtenida', listaGrupos });
     }
     else {
         res.send({ status: false, message: 'no se obtuvo la lista' });
@@ -25,6 +25,9 @@ const obtenerDetalleGrupo = (req, res) => __awaiter(void 0, void 0, void 0, func
     const detalleGrupo = yield grupos_schema_1.gruposSchema.findById({ _id: req.params._id });
     if (detalleGrupo) {
         res.send({ status: true, message: 'se obtuvo los detalles del grupo' });
+    }
+    else {
+        res.send({ status: false, message: 'no se obtuvo el detalle' });
     }
 });
 exports.obtenerDetalleGrupo = obtenerDetalleGrupo;
