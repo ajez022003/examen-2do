@@ -9,6 +9,6 @@ router.post('/login',login)
 router.get('/:id_usuario',obtenerConversacionesUsuario)
 
 //*(controlador usuarios)*agregar caciones de artistas a la lista de playlist del usuario*
-// http://localhost:3000/usuarios/:id/mensajes
+// http://localhost:4000/usuarios/:id/mensajes
 router.put('/:id_usuario/mensajes', AgregarMensajeUsuario)
 export default router

@@ -12,6 +12,6 @@ router.post('/login', usuarios_controller_1.login);
 //(controlador usuarios)mostrar los mensajes de usuarios en la ventana modal
 router.get('/:id_usuario', usuarios_controller_1.obtenerConversacionesUsuario);
 //*(controlador usuarios)*agregar caciones de artistas a la lista de playlist del usuario*
-// http://localhost:3000/usuarios/:id/mensajes
+// http://localhost:4000/usuarios/:id/mensajes
 router.put('/:id_usuario/mensajes', usuarios_controller_1.AgregarMensajeUsuario);
 exports.default = router;
